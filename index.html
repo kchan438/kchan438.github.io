@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
+    <script>
+    function confirmEmail()
+    {
+        var email = document.getElementById("EmailInput").value;
+        var confirmEmail = document.getElementById("ConfirmEmailInput").value;
+        if(email != confirmEmail)
+        {
+//          alert("Email does not match!");
+            return false;
+        }
+    }
+    </script>
+    
+    <body>
+        <title>Data Survey Form</title>
+        <h1 class="text-center"> Data Survey Form</h1>
+
+        <br><br><br>
+        <div class="container">
+            <div class="row">
+                <div class="panel panel-primary">
+                    <div class="panel-heading text-center">
+                        Registration Page
+                    </div>
+                    <div class="panel-secondary">
+                        Please fill out the following fields, * denotes a mandatory field.
+                    </div>
+
+                    <div class="panel-body">
+                        <form action="verification.html" method="GET">
+                            <div class="form-group">
+                                <label id="FullName" for="NameInput">
+                                    First and Last Name*:
+                                </label><br>
+                                <input type="text" name="NameInput" maxlength="40" required /><br><br>
+                            </div>
+                            <div class="form-group">    
+                                <label id="Address" for="AddressInput">
+                                    Street Address*:
+                                </label><br>
+                                <input type="text" name="AddressInput" maxlength="40" required /><br><br>
+                            </div>
+
+                            <div class="form-group"> 
+                                <label id="City" for="CityInput">
+                                    City*:
+                                </label><br>
+                                <input type="text" name="CityInput" maxlength="40" required /><br><br>
+                            </div>
+
+                            <div class="form-group">
+                                <label id="State" for="StateInput">
+                                    State*:
+                                </label><br>
+                                <input type="text" name="StateInput" maxlength="40" placeholder="Ex: CA or California" required /><br><br>
+                            </div>
+
+                            <div class="form-group">
+                                <label id="ZipCode" for="ZipCodeInput">
+                                    Zip Code*:
+                                </label><br>
+                                <input type="text" name="ZipCodeInput" min="0" maxlength="5" required /><br><br>
+                            </div>
+
+                            <div class="form-group">
+                                <label id="Birthdate" for="BirthdateInput">
+                                    Birthdate*:
+                                </label><br>
+                                <input type="date" name="BirthdateInput" style="width:180px" required /><br><br>
+                            </div>
+
+                            <div class="form-group">
+                                <label id="Phone" for="PhoneInput">
+                                    Phone*:
+                                </label><br>
+                                <input type ="tel" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "8" name="PhoneInput" pattern="^\d{3}-\d{4}$" placeholder="XXX-XXXX" required /><br><br>
+                            </div>
+
+                            <div class="form-group">
+                                <label id="Email" for="EmailInput">
+                                    Email Address*:
+                                </label><br>
+                                <input type="email" name="EmailInput" maxlength="40" required /><br><br>
+                            </div>
+
+<!--
+                            <div class="form-group">
+                                <label id="ConfirmEmail" for="ConfirmEmailInput">
+                                    Confirm Email*:
+                                </label>
+                                <input type="email" name="ConfirmEmailInput" maxlength="40" required /><br><br>
+                            </div>
+-->
+                            
+                            <div class="dropdown">
+                                <label name="Education" for="dropDown">
+                                    Education Level:
+                                </label><br>
+                                <select name="dropDown">
+                                    <option value="Select Level">
+                                        Select Level
+                                    </option>
+                                    <option value="High School">
+                                        High School
+                                    </option>
+                                    <option value="Some College">
+                                        Some college
+                                    </option>
+                                    <option value="AS Degree">
+                                        AS Degree
+                                    </option>
+                                    <option value="BS Degree">
+                                        BS Degree
+                                    </option>
+                                    <option value="Master's Degree">
+                                        Master's Degree
+                                    </option>
+                                    <option value="PhD">
+                                        PhD
+                                    </option>
+                                    <option value="Doctorate">
+                                        Doctorate
+                                    </option>
+                                </select>
+                            </div>
+
+                            <br><br><br><br>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="checkBox" required />
+                                <label class="form-check-label" for="checkBox"> I agree to the terms. </label>
+                            </div><br>
+                            
+                            <div style="text-align: center">
+                                <div class="g-recaptcha" data-sitekey="your_site_key" style="display: inline-block"></div><br>
+                            </div>
+                            
+                            <input type="submit" href="html/verfication.html" onclick="confirmEmail()" class="btn btn-success" value="Continue" style="float:right">
+
+                        </form>
+
+                    </div>
+                    
+                    <div class="panel-footer text-right">
+                        &copy; Kevin Chan
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
