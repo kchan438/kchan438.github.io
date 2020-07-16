@@ -140,11 +140,15 @@
                                 <div class="g-recaptcha" data-sitekey="6Lf-WLIZAAAAAAH19-kJ-Vxos8GDfnOeqDEjJoQQ" data-callback="recaptchaCheck" style="display: inline-block"></div><br>
                             </div>
                             
-                            <input id="submitButton" type="submit" href="html/verfication.html" onclick="confirmEmail()" class="btn btn-success" value="Continue" style="float:right" disabled>
+                            <input id="submitButton" type="submit" href="html/verfication.html" class="btn btn-success" value="Continue" style="float:right" disabled>
 
                             <script>
                                     function recaptchaCheck() {
-                                        $('#submitButton').removeAttr('disabled');
+                                        if(grecaptcha && grecaptcha().getResponse().length > 0)
+                                            {
+                                                console.log("captcha was checked");
+                                              $('#submitButton').removeAttr('disabled');
+                                            }
                                     }
                                 </script>
                         </form>
