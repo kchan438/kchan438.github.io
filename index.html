@@ -137,10 +137,15 @@
                             </div><br>
                             
                             <div style="text-align: center">
-                                <div class="g-recaptcha" data-sitekey="6Lf-WLIZAAAAAAH19-kJ-Vxos8GDfnOeqDEjJoQQ" style="display: inline-block"></div><br>
+                                <div class="g-recaptcha" data-sitekey="6Lf-WLIZAAAAAAH19-kJ-Vxos8GDfnOeqDEjJoQQ" data-callback="recaptchaCheck()" style="display: inline-block"></div><br>
+                                <script>
+                                    function recaptchaCheck() {
+                                        $('#submitButton').removeAttr('disabled');
+                                    }
+                                </script>
                             </div>
                             
-                            <input type="submit" href="html/verfication.html" onclick="confirmEmail()" class="btn btn-success" value="Continue" style="float:right">
+                            <input id="submitButton" type="submit" href="html/verfication.html" onclick="confirmEmail()" class="btn btn-success" value="Continue" style="float:right" disabled>
 
                         </form>
 
