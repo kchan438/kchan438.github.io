@@ -144,6 +144,7 @@
 
                             <script>
                                     function recaptchaCheck() {
+                                        console.log("captcha function")
                                         if(grecaptcha && grecaptcha().getResponse().length > 0)
                                             {
                                                 console.log("captcha was checked");
