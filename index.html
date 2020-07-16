@@ -143,17 +143,14 @@
                             <script>
                                     function recaptchaCheck() {
                                         console.log("captcha function")
-                                        if(grecaptcha().getResponse().length != 0)
-                                            {
-//                                                console.log("captcha was checked");
-                                             //${'#submitButton'}.removeAttr('disabled');
-                                                return true;
+                                        if(grecaptcha.getResponse().length != 0)
+                                            {                                               document.getElementById("submitButton").disabled = false;
                                             }
-                                        return false;
+                                        document.getElementById("submitButton").disabled = true;
                                     }
                                 </script>
                             
-                            <input id="submitButton" type="submit" href="html/verfication.html" class="btn btn-success" value="Continue" style="float:right">
+                            <input id="submitButton" type="submit" href="html/verfication.html" class="btn btn-success" value="Continue" style="float:right" disabled>
 
                         </form>
 
