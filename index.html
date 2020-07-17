@@ -137,12 +137,11 @@
                             </div><br>
                             
                             <div style="text-align: center">
-                                <div class="g-recaptcha" data-sitekey="6Lf-WLIZAAAAAAH19-kJ-Vxos8GDfnOeqDEjJoQQ" data-callback="recaptchaCheck()" style="display: inline-block"></div><br>
+                                <div class="g-recaptcha" data-sitekey="6Lf-WLIZAAAAAAH19-kJ-Vxos8GDfnOeqDEjJoQQ" data-callback="recaptchaCheck" style="display: inline-block"></div><br>
                             </div>
 
                             <script>
                                     function recaptchaCheck() {
-                                        console.log("captcha function")
                                         if(grecaptcha.getResponse().length != 0)
                                             {                                               document.getElementById("submitButton").disabled = false;
                                             }
