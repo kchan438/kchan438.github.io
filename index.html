@@ -131,7 +131,8 @@
                                     function expiredCheck() {
                                         if(grecaptcha.getResponse().length == 0)
                                             {
-                                            document.getElementById("submitButton").disable = true;   
+//                                            document.getElementById("submitButton").disable = true;
+                                                grecaptcha.reset();
                                             }
                                     }
                                 </script>
