@@ -92,6 +92,7 @@
         });
       }
     }
+    google.maps.event.addDomListener(window, 'resize', initialize);
     google.maps.event.addDomListener(window, 'load', initialize);
         
     </script>
@@ -108,8 +109,7 @@
 
                     <div class="panel-secondary text-center">
                         <br>
-                        <meta name="viewport" initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0>
-                        <div id="map"></div>
+                        <div id="map" style="width: 300px;height:300px;"></div>
                     </div>
 
                     <div class="panel-body text-left">
