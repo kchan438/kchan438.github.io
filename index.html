@@ -146,7 +146,7 @@
                                             {                                               document.getElementById("submitButton").disabled = false;
                                             }
                                     }
-                                    function expiredCheck() {
+                                    function expiredCheck(grecaptcha.getResponse().length == 0) {
                                         document.getElementById("submitButton").disable = true;
                                     }
                                 </script>
