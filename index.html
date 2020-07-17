@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     </head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?data-expired-callback="expiredCheck"" async defer></script>
     
     <body>
         <title>Data Survey Form</title>
@@ -119,7 +119,7 @@
                             </div><br>
                             
                             <div style="text-align: center">
-                                <div class="g-recaptcha" data-sitekey="6Lf-WLIZAAAAAAH19-kJ-Vxos8GDfnOeqDEjJoQQ" data-callback="recaptchaCheck" data-expired-callback="expiredCheck" style="display: inline-block"></div><br>
+                                <div class="g-recaptcha" data-sitekey="6Lf-WLIZAAAAAAH19-kJ-Vxos8GDfnOeqDEjJoQQ" data-callback="recaptchaCheck" style="display: inline-block"></div><br>
                             </div>
 
                             <script>
@@ -131,8 +131,8 @@
                                     function expiredCheck() {
                                         if(grecaptcha.getResponse().length == 0)
                                             {
-//                                            document.getElementById("submitButton").disable = true;
-                                                grecaptcha.reset();
+                                            document.getElementById("submitButton").disable = true;
+//                                                grecaptcha.reset();
                                             }
                                     }
                                 </script>
