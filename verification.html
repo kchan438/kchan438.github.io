@@ -19,7 +19,7 @@
       #map {
         margin:auto;
         height: 500px;
-        width: 500px;
+        width: 100%;
       }
     </style>
     <script>
@@ -92,7 +92,6 @@
         });
       }
     }
-    google.maps.event.addDomListener(window, 'resize', initialize);
     google.maps.event.addDomListener(window, 'load', initialize);
         
     </script>
@@ -109,7 +108,7 @@
 
                     <div class="panel-secondary text-center">
                         <br>
-                        <div id="map" style="width: 300px;height:300px;"></div>
+                        <div id="map"></div>
                     </div>
 
                     <div class="panel-body text-left">
