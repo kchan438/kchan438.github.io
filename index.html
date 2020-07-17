@@ -146,8 +146,11 @@
                                             {                                               document.getElementById("submitButton").disabled = false;
                                             }
                                     }
-                                    function expiredCheck(grecaptcha.getResponse().length == 0) {
-                                        document.getElementById("submitButton").disable = true;
+                                    function expiredCheck() {
+                                        if(grecaptcha.getResponse().length == 0)
+                                            {
+                                            document.getElementById("submitButton").disable = true;   
+                                            }
                                     }
                                 </script>
                             
