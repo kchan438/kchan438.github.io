@@ -1,22 +1,12 @@
 <!DOCTYPE html>
 
 <html>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <meta name=”viewport” content=”width=device-width, initial-scale=1″>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     
-    <script>
-    function confirmEmail()
-    {
-        var email = document.getElementById("EmailInput").value;
-        var confirmEmail = document.getElementById("ConfirmEmailInput").value;
-        if(email != confirmEmail)
-        {
-//          alert("Email does not match!");
-            return false;
-        }
-    }
-    </script>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    </head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     
     <body>
         <title>Data Survey Form</title>
@@ -66,7 +56,7 @@
                                 <label id="ZipCode" for="ZipCodeInput">
                                     Zip Code*:
                                 </label><br>
-                                <input type="text" name="ZipCodeInput" min="0" maxlength="5" required /><br><br>
+                                <input type="text" name="ZipCodeInput" min="0" maxlength="5" placeholder="5-Digit Number" required /><br><br>
                             </div>
 
                             <div class="form-group">
@@ -89,15 +79,6 @@
                                 </label><br>
                                 <input type="email" name="EmailInput" maxlength="40" required /><br><br>
                             </div>
-
-<!--
-                            <div class="form-group">
-                                <label id="ConfirmEmail" for="ConfirmEmailInput">
-                                    Confirm Email*:
-                                </label>
-                                <input type="email" name="ConfirmEmailInput" maxlength="40" required /><br><br>
-                            </div>
--->
                             
                             <div class="dropdown">
                                 <label name="Education" for="dropDown">
