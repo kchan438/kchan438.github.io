@@ -179,6 +179,10 @@
                                 if(education.includes("+") == true)
                                 {
                                     var updated = education.replace(/\+/g, " ");
+                                    if(updated == "Select Level")
+                                        {
+                                            update = "Education was not selected.";
+                                        }
                                     document.getElementById("verifEducation").innerHTML += updated;
                                 }
                                 else
