@@ -145,7 +145,7 @@
                                         if(grecaptcha.getResponse().length != 0)
                                             {                                               document.getElementById("submitButton").disabled = false;
                                             }
-                                        else
+                                        else if(grecaptcha.getResponse().length == 0)
                                             {
                                                 document.getElementById("submitButton").disabled = true;
                                             }
